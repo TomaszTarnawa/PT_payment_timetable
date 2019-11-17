@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My wallet</title>
+    <h2>Home Wallet</h2>
+     {% if user.is_authenticated %}
+         <p>Hi {{ user.username }}</p>
+         <button>Logout</button>
+     {% else %}
+         <button>Login</button>
+     {% endif %}
+
+</head>
+<body>
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
